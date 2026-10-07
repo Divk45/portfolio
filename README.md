@@ -1,6 +1,8 @@
 # BytePing / byteping.xyz
 
-Personal cybersecurity portfolio for **Divyanshu Kashyap aka BytePing**.
+Personal cybersecurity portfolio for BytePing.
+
+The site includes a custom SVG favicon, an Open Graph preview image at `/og-image.svg`, and an optional terminal-style boot screen that can be skipped.
 
 ## Local preview
 
@@ -16,4 +18,4 @@ The repository is configured as a root-served static site and contains a `CNAME`
 
 In **Settings → Pages**, choose **Deploy from a branch**, select `main`, and select `/ (root)`. The registrar DNS should contain GitHub Pages' four apex A records and a `www` CNAME pointing to `Divk45.github.io`.
 
-The site intentionally leaves the CRACCON writeup link as `[ writeup link not provided ]` because no public URL was supplied. Replace that placeholder only when the public writeup exists.
+The CRACCON writeup remains marked as a placeholder because no public URL was supplied.
