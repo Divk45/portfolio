@@ -1,50 +1,29 @@
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav');
-const glow = document.querySelector('.cursor-glow');
-const boot = document.querySelector('#boot-screen');
-const bootLog = document.querySelector('#boot-log');
-const bootProgress = document.querySelector('.boot-progress span');
-const skipBoot = document.querySelector('#skip-boot');
+const menuButton = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.site-nav');
 
-if (toggle && nav) {
-  toggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
+if (menuButton && nav) {
+  menuButton.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(open));
   });
-  nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-  }));
-}
 
-if (glow && window.matchMedia('(pointer:fine)').matches) {
-  window.addEventListener('pointermove', (event) => {
-    glow.style.left = `${event.clientX}px`;
-    glow.style.top = `${event.clientY}px`;
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    });
   });
 }
 
-if (boot && bootLog && bootProgress) {
-  const lines = ['initialising secure shell', 'loading field notes', 'mounting /research', 'checking transmission channel', 'byteping.xyz ready'];
-  let index = 0;
-  const finishBoot = () => {
-    boot.classList.add('done');
-    document.body.classList.remove('booting');
-  };
-  document.body.classList.add('booting');
-  const addLine = () => {
-    if (index < lines.length) {
-      const line = document.createElement('span');
-      line.className = `boot-line${index === 3 ? ' warn' : ''}`;
-      line.textContent = lines[index];
-      bootLog.appendChild(line);
-      index += 1;
-      bootProgress.style.width = `${(index / lines.length) * 100}%`;
-      window.setTimeout(addLine, 280);
-    } else {
-      window.setTimeout(finishBoot, 420);
-    }
-  };
-  window.setTimeout(addLine, 180);
-  if (skipBoot) skipBoot.addEventListener('click', finishBoot);
+const sections = [...document.querySelectorAll('main section[id]')];
+const navLinks = [...document.querySelectorAll('.site-nav a')];
+
+if ('IntersectionObserver' in window && sections.length && navLinks.length) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+    });
+  }, { rootMargin: '-35% 0px -55% 0px' });
+  sections.forEach((section) => observer.observe(section));
 }
