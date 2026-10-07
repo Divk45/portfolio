@@ -1,34 +1,19 @@
-# BytePing portfolio
+# BytePing / byteping.xyz
 
-A static, responsive portfolio for **Divk45**, built for [byteping.xyz](https://byteping.xyz). The site is intentionally dependency-free so GitHub Pages can serve it directly.
+Personal cybersecurity portfolio for **Divyanshu Kashyap aka BytePing**.
 
-## Files
-
-- `index.html` — semantic page structure and content
-- `style.css` — responsive dark cybersecurity-inspired visual system
-- `script.js` — accessible mobile navigation
-- `CNAME` — custom GitHub Pages domain
-
-## Run locally
-
-From the repository root, use any static server. For example:
+## Local preview
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Open `http://localhost:8000`.
 
 ## GitHub Pages
 
-1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select the `main` branch and `/ (root)`, then save.
-4. GitHub Pages will detect the `CNAME` file and use `byteping.xyz`.
-5. Enable **Enforce HTTPS** once the certificate is ready.
+The repository is configured as a root-served static site and contains a `CNAME` file for `byteping.xyz`.
 
-### DNS for `byteping.xyz`
+In **Settings → Pages**, choose **Deploy from a branch**, select `main`, and select `/ (root)`. The registrar DNS should contain GitHub Pages' four apex A records and a `www` CNAME pointing to `Divk45.github.io`.
 
-At your domain registrar, configure the apex domain with the four GitHub Pages A records currently listed in GitHub’s Pages documentation. If you also want `www.byteping.xyz`, add a CNAME from `www` to `Divk45.github.io` and optionally redirect it to the apex domain in GitHub Pages.
-
-DNS changes can take time to propagate. Do not remove the `CNAME` file when making future site edits.
+The site intentionally leaves the CRACCON writeup link as `[ writeup link not provided ]` because no public URL was supplied. Replace that placeholder only when the public writeup exists.

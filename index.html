@@ -3,61 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BytePing — cybersecurity researcher, CTF player, and builder of curious things on the web.">
-  <meta name="theme-color" content="#07110f">
-  <title>BytePing — Security-minded builder</title>
+  <meta name="description" content="Divyanshu Kashyap aka BytePing — cybersecurity student, CTF player, and security researcher focused on web, API, cloud, ICS/OT, and UAV security.">
+  <meta name="theme-color" content="#050608">
+  <title>BytePing // Divyanshu Kashyap</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="BytePing home"><span class="brand-mark">&gt;_</span> byteping<span class="accent">.xyz</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
-    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="#about">about</a><a href="#work">work</a><a href="#skills">stack</a><a href="#contact">contact</a>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="logo" href="#top" aria-label="BytePing home"><span class="logo-bracket">[</span>byteping<span class="logo-bracket">]</span><span class="logo-caret">_</span></a>
+    <div class="topbar-status"><span class="online-dot"></span> available for security work</div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span><b class="sr-only">Open navigation</b></button>
+    <nav id="nav" class="nav" aria-label="Main navigation">
+      <a href="#profile">01_profile</a><a href="#operations">02_ops</a><a href="#writeups">03_writeups</a><a href="#contact">04_contact</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero section-wrap">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> online / curious / shipping</p>
-        <h1>Breaking things<br><em>to build them</em><span class="cursor">_</span></h1>
-        <p class="hero-text">I’m <strong>Divk45</strong> — a cybersecurity-minded developer and CTF player exploring the edges between systems, data, and the web.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#work">Explore my work <span>↘</span></a><a class="text-link" href="https://github.com/Divk45" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+    <section class="hero shell">
+      <div class="hero-main">
+        <p class="eyebrow"><span class="prompt">root@byteping:~$</span> whoami</p>
+        <h1>Divyanshu<br><span>Kashyap</span></h1>
+        <div class="alias">aka <strong>BytePing</strong> <span class="slash">//</span> cybersecurity student <span class="slash">//</span> CTF player</div>
+        <p class="hero-intro">I investigate how systems fail, document what I find, and build things that make the next failure harder.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#operations">enter the lab <span>↘</span></a><a class="plain-link" href="mailto:kdivyanshu832@gmail.com">send a signal ↗</a></div>
       </div>
-      <div class="terminal-card" aria-label="Terminal-style introduction">
-        <div class="terminal-bar"><span></span><span></span><span></span><small>byteping@local:~</small></div>
-        <div class="terminal-body"><p><span class="prompt">$</span> whoami</p><p class="terminal-output">security researcher<br>builder of useful things<br>professional question-asker</p><p><span class="prompt">$</span> cat current_focus.txt</p><p class="terminal-output green">learning in public<span class="blink">_</span></p></div>
+      <div class="hero-console">
+        <div class="console-head"><span class="lights"><i></i><i></i><i></i></span><span>session://byteping.xyz</span><span class="console-lock">LOCKED</span></div>
+        <div class="console-body">
+          <p><span class="green">$</span> cat /etc/profile</p>
+          <p class="output"><b>FOCUS</b><br>web security<br>API security<br>cloud misconfigurations<br>ICS/OT + UAV research</p>
+          <p><span class="green">$</span> status --current</p>
+          <p class="output cyan">researching<span class="typing-cursor">▌</span></p>
+        </div>
+        <div class="console-foot"><span>DEL, IN</span><span>LAT 28.6139 / LON 77.2090</span></div>
+      </div>
+      <div class="hero-grid-label">EST. 2023 — PRESENT / NFSU DELHI</div>
+    </section>
+
+    <section id="profile" class="shell section profile">
+      <div class="section-index">01</div>
+      <div class="section-title"><span>profile</span><h2>Read the<br><em>operator notes.</em></h2></div>
+      <div class="profile-copy"><p>I’m a cybersecurity student at the <strong>National Forensic Sciences University, Delhi</strong>, focused on web and API security, reverse engineering, network forensics, cloud misconfigurations, and security research for industrial control systems and drones.</p><p>I’m looking for hands-on work in <strong>VAPT, application security, and API security</strong>. I write detailed, step-by-step notes because a finding is more useful when someone else can reproduce the reasoning behind it.</p><div class="profile-facts"><div><span>LOCATION</span><b>Delhi, India</b></div><div><span>EDUCATION</span><b>Integrated B.Tech – M.Tech</b></div><div><span>CGPA</span><b>8.13</b></div></div></div>
+    </section>
+
+    <section id="operations" class="shell section operations">
+      <div class="section-index">02</div>
+      <div class="section-title"><span>operations</span><h2>Current<br><em>engagements.</em></h2></div>
+      <div class="ops-list">
+        <article class="op-card active"><div class="op-meta"><span class="op-state">● IN PROGRESS</span><span>2026 / PRIVATE CODE</span></div><h3>ICSTwin</h3><p>A virtual twin of an industrial control network: switches, firewalls, and PLC logic. Next on the board: simulated Modbus, DNP3, and IEC 61850 attacks, plus mapping to India’s CEA 2026 power-sector cybersecurity requirements.</p><div class="tags"><span>ICS/OT</span><span>THREAT MODELING</span><span>NETWORKS</span></div></article>
+        <article class="op-card active"><div class="op-meta"><span class="op-state">● IN PROGRESS</span><span>2026 / NFSU MINOR PROJECT</span></div><h3>UAV command-link authentication</h3><p>Designing a dual-layer MAVLink authentication system combining CNN-based RF fingerprinting with CRYSTALS-Dilithium signatures. The evaluation target is a 20–100 ms real-time budget — no results claimed yet.</p><div class="tags"><span>MAVLINK</span><span>RF FINGERPRINTING</span><span>DILITHIUM</span></div></article>
+        <article class="op-card"><div class="op-meta"><span class="op-state muted">● SHIPPED</span><span>2023</span></div><h3>Autonomous navigation vehicle</h3><p>Raspberry Pi 3B prototype using OpenCV lane detection, path planning, and ultrasonic obstacle avoidance through a motor-speed feedback loop.</p><div class="tags"><span>OPENCV</span><span>RASPBERRY PI</span><span>ROBOTICS</span></div></article>
+        <article class="op-card"><div class="op-meta"><span class="op-state muted">● SHIPPED</span><span>2022</span></div><h3>Line following robot</h3><p>Arduino UNO build with IR sensors, an L298 motor driver, and a custom control script reading infrared reflectivity.</p><div class="tags"><span>ARDUINO</span><span>CONTROL SYSTEMS</span></div></article>
       </div>
     </section>
 
-    <section id="about" class="section-wrap split-section">
-      <div><p class="section-label">01 / about</p><h2>Always looking<br>under the hood.</h2></div>
-      <div class="section-content"><p>I like understanding how things work — especially when they don’t work as intended. My playground is a mix of web security, reverse engineering, data, and small experiments that turn into bigger ideas.</p><p>When I’m not solving a challenge, I’m documenting the path. The best discoveries are the ones that become useful to someone else.</p><div class="fact-row"><div><strong>01</strong><span>curiosity<br>driven</span></div><div><strong>24/7</strong><span>learning<br>mode</span></div><div><strong>∞</strong><span>rabbit<br>holes</span></div></div></div>
-    </section>
-
-    <section id="work" class="section-wrap work-section">
-      <div class="section-heading"><div><p class="section-label">02 / selected work</p><h2>Things I’ve<br><em>dug into.</em></h2></div><span class="heading-note">03 projects / open source</span></div>
-      <div class="project-grid">
-        <a class="project-card featured" href="https://github.com/Divk45/RAD-CTF-Writeup" target="_blank" rel="noreferrer"><span class="project-number">01</span><div class="project-icon">◈</div><h3>RAD CTF Writeup</h3><p>Notes, methodology, and hard-won lessons from a hands-on capture-the-flag challenge.</p><span class="project-link">read writeup ↗</span><span class="card-arrow">↗</span></a>
-        <a class="project-card" href="https://github.com/Divk45/MythX-CTF-Writeup" target="_blank" rel="noreferrer"><span class="project-number">02</span><div class="project-icon">⌁</div><h3>MythX CTF Writeup</h3><p>Breaking down the clues, tools, and thinking behind another security challenge.</p><span class="project-link">read writeup ↗</span><span class="card-arrow">↗</span></a>
-        <a class="project-card" href="https://github.com/Divk45/VOIS_AICTE_Oct2025_NetflixDataAnalysis_DivyanshuKashyap" target="_blank" rel="noreferrer"><span class="project-number">03</span><div class="project-icon">▦</div><h3>Netflix Data Analysis</h3><p>Turning a familiar dataset into clear patterns, visual stories, and better questions.</p><span class="project-link">view project ↗</span><span class="card-arrow">↗</span></a>
+    <section id="writeups" class="shell section writeups">
+      <div class="section-index">03</div>
+      <div class="section-title"><span>field notes</span><h2>Proof of<br><em>work.</em></h2></div>
+      <div class="writeup-content">
+        <div class="achievement-strip"><div><b>01</b><span>MYTHX CTF<br>offline round</span></div><div><b>02</b><span>KASHI CTF<br>500+ teams</span></div><div><b>03</b><span>VERGE CTF<br>offline round</span></div></div>
+        <p class="team-note">Team leader / team <strong>Rudra_Root</strong> <span class="dim">· also played CRACCON '26 + RAD 2.0</span></p>
+        <div class="writeup-grid">
+          <a class="writeup-card" href="https://github.com/Divk45/MythX-CTF-Writeup" target="_blank" rel="noreferrer"><span class="writeup-no">W/01</span><h3>MythX CTF</h3><p>31 challenges: prototype pollution, weak JWT secrets, SSTI, IDOR, mass assignment, path traversal, command injection, native exploitation, steganography, forensics, and OSINT.</p><span class="read">read the notes ↗</span></a>
+          <div class="writeup-card"><span class="writeup-no">W/02</span><h3>CRACCON '26</h3><p>19 challenges covering SSRF to AWS metadata, IAM privilege escalation, S3 enumeration, Lambda secrets, SQLi, IDOR, JWT, signed RPC mass assignment, reverse engineering, and Git-history recovery.</p><span class="read placeholder">[ writeup link not provided ]</span></div>
+          <a class="writeup-card" href="https://github.com/Divk45/RAD-CTF-Writeup" target="_blank" rel="noreferrer"><span class="writeup-no">W/03</span><h3>RAD 2.0 / VERGE '26</h3><p>Credential leakage, AES token forgery, Shamir secret sharing, zsteg, zero-width characters, Ghidra, ptrace bypass, DNS exfiltration, and timing-jitter covert channels.</p><span class="read">read the notes ↗</span></a>
+        </div>
       </div>
     </section>
 
-    <section id="skills" class="section-wrap skills-section split-section">
-      <div><p class="section-label">03 / toolkit</p><h2>Tools for<br>the hunt.</h2></div>
-      <div class="skill-cloud"><span>Python</span><span>Linux</span><span>Web Security</span><span>Git</span><span>JavaScript</span><span>Data Analysis</span><span>CTFs</span><span>Problem Solving</span></div>
+    <section class="shell section capabilities">
+      <div class="section-index">04</div>
+      <div class="section-title"><span>capabilities</span><h2>Know the<br><em>attack surface.</em></h2></div>
+      <div class="capability-grid"><div><span class="cap-label">APPLICATION / API</span><p>OWASP Top 10 · IDOR · JWT attacks · SQL injection · SSTI · SSRF · command injection · path traversal · mass assignment · prototype pollution · misconfiguration</p></div><div><span class="cap-label">TOOLING</span><p>Burp Suite · Nmap · Wireshark · Metasploit · OWASP ZAP · OpenVAS · Hashcat · curl · Ghidra · GDB · Pwntools</p></div><div><span class="cap-label">FOUNDATIONS</span><p>HTTP/HTTPS · TCP/IP · DNS · Linux/Kali · Bash · REST · GraphQL · Git/GitHub · AWS IAM/S3/Lambda</p></div><div><span class="cap-label">BUILD / ANALYSE</span><p>Python · C/C++ · Java · .NET · R · SQL · Node.js · OpenCV · NumPy · Pandas · TensorFlow · SciPy · Matplotlib</p></div></div>
     </section>
 
-    <section id="contact" class="section-wrap contact-section"><p class="section-label">04 / say hello</p><h2>Have a puzzle?<br><em>Let’s talk.</em></h2><p class="contact-copy">Whether you want to collaborate, compare notes, or just say hi — my inbox is open.</p><a class="button button-primary" href="mailto:hello@byteping.xyz">hello@byteping.xyz <span>↗</span></a><div class="socials"><a href="https://github.com/Divk45" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></section>
+    <section class="shell section timeline"><div class="section-index">05</div><div class="section-title"><span>timeline</span><h2>Work<br><em>logged.</em></h2></div><div class="timeline-list"><div><span>2026</span><b>BPR&D / Modernization Division</b><p>Researched AI in surveillance technology: UAVs, CCTV video analytics, facial recognition, and GIS mapping. Authored a technical report.</p></div><div><span>2025</span><b>VOIS / Edunet Foundation</b><p>Conversational data analysis intern. Used an LLM to automate unstructured-data analysis, generate inferences, and explore trends and entity relationships.</p></div><div><span>2025 / 2024</span><b>Community + extra-curricular</b><p>Design team volunteer at BSides Dehradun 0x02 and Cyber Security Awareness Month at NFSU Delhi.</p></div></div></section>
+
+    <section id="contact" class="contact shell"><div class="contact-kicker">END_OF_TRANSMISSION?</div><h2>Open a<br><em>channel.</em></h2><p>For internship conversations, security collaboration, or a good technical rabbit hole.</p><a class="email" href="mailto:kdivyanshu832@gmail.com">kdivyanshu832@gmail.com <span>↗</span></a><div class="social-links"><a href="https://www.linkedin.com/in/kashyap-divyanshu" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://tryhackme.com/p/BytePing" target="_blank" rel="noreferrer">TryHackMe ↗</a><a href="https://ctftime.org/team/404647" target="_blank" rel="noreferrer">CTFTime ↗</a><a href="https://github.com/Divk45" target="_blank" rel="noreferrer">GitHub ↗</a></div></section>
   </main>
 
-  <footer class="site-footer section-wrap"><span>© 2026 BytePing</span><span>built with curiosity <span class="accent">✦</span></span><a href="#top">back to top ↑</a></footer>
+  <footer class="footer shell"><span>byteping.xyz</span><span>Divyanshu Kashyap / Delhi, India</span><a href="#top">↑ top</a></footer>
   <script src="script.js"></script>
 </body>
 </html>
